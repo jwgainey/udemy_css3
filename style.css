@@ -1,7 +1,11 @@
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 /*box sizing and round corners */
 #box {
     background: red;
+    color: white;
     height: 200px;
     width: 200px;
     margin: 10px auto;
@@ -70,4 +74,35 @@ body#columns {
     -webkit-column-rule-color: #ddd;
     -webkit-column-rule-color: #ddd;
     column-rule-color: #ddd;
+}
+
+/* animations & transitions */
+
+@keyframes box {
+    0% {border-radius: 40px; background: red; 
+        top: 0px; left 0px;}
+    100% {border-radius: 100%; background: blue;
+        top: 100px; left: 100px;}
+}
+
+#animations #box {
+    position: relative;
+    animation: box 5s linear 2s 3 alternate;
+}
+
+#box2 {
+    position: relative;
+    background: blue;
+    color: white;
+    width: 200px;
+    height: 200px;
+}
+
+#box2:hover {
+    background: red;
+    width: 300px;
+    height: 300px;
+    top: -20px;
+    left: 30px;
+    transition: all 4s;
 }
